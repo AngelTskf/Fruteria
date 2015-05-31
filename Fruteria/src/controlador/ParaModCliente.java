@@ -60,7 +60,7 @@ public class ParaModCliente extends ModClienteUI {
 			cliente = listaCliente.buscarCliente(txtBuscarNombre.getText(), txtBuscarApellido.getText());
 			if (cliente != null) {
 				identificador = cliente.identificador();
-				txtDNI.setText(cliente.getDni());
+				txtDNI.setText(cliente.getDni().toUpperCase());
 				txtNombre.setText(cliente.getNombre());
 				txtApellidos.setText(cliente.getApellidos());
 				if (cliente.getColorPelo() != null) {
@@ -69,6 +69,7 @@ public class ParaModCliente extends ModClienteUI {
 					txtColorDePelo.setForeground(cliente.getColorPelo());
 					txtBuscarNombre.setText("");
 					txtBuscarApellido.setText("");
+
 					btnEscogerColor.setEnabled(true);
 					btnModificar.setEnabled(true);
 				}
@@ -94,7 +95,7 @@ public class ParaModCliente extends ModClienteUI {
 				int e = validador.checkNif(txtDNI.getText());
 
 				if (e > 0) {
-					cliente.setDni(txtDNI.getText());
+					cliente.setDni(txtDNI.getText().toUpperCase());
 					cliente.setNombre(txtNombre.getText());
 					cliente.setApellidos(txtApellidos.getText());
 					cliente.setColorPelo(colorActual);

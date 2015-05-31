@@ -44,10 +44,12 @@ public class ModClienteUI extends JPanel {
 	public ModClienteUI() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 30, 10, 10, 0, 10, 30, 10, 10 };
-		gridBagLayout.rowHeights = new int[] {44, 30, 30, 10, 34, 30, 30, 10, 10, 10, 10, 30, 30, 30, 30};
+		gridBagLayout.rowHeights = new int[] { 44, 30, 30, 10, 34, 30, 30, 10, 10, 10, 10, 30, 30, 30, 30 };
 		gridBagLayout.columnWeights = new double[] { 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, Double.MIN_VALUE };
-		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
+		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+				0.0 };
 		setLayout(gridBagLayout);
+
 						
 						GridBagConstraints gbc_label = new GridBagConstraints();
 						gbc_label.gridheight = 2;
@@ -208,6 +210,7 @@ public class ModClienteUI extends JPanel {
 				add(txtColorDePelo, gbc_txtColorDePelo);
 				txtColorDePelo.setColumns(10);
 						
+
 		GridBagConstraints gbc_btnEscogerColor = new GridBagConstraints();
 		gbc_btnEscogerColor.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnEscogerColor.insets = new Insets(0, 0, 5, 5);
@@ -215,14 +218,14 @@ public class ModClienteUI extends JPanel {
 		gbc_btnEscogerColor.gridy = 10;
 		btnEscogerColor.setIcon(new ImageIcon(ModClienteUI.class.getResource("/iconos/color.png")));
 		add(btnEscogerColor, gbc_btnEscogerColor);
-										
-												GridBagConstraints gbc_btnModificar = new GridBagConstraints();
-												gbc_btnModificar.fill = GridBagConstraints.HORIZONTAL;
-												gbc_btnModificar.insets = new Insets(0, 0, 5, 5);
-												gbc_btnModificar.gridx = 5;
-												gbc_btnModificar.gridy = 12;
-												btnModificar.setIcon(new ImageIcon(ModClienteUI.class.getResource("/iconos/pencil.png")));
-												add(btnModificar, gbc_btnModificar);
+
+		GridBagConstraints gbc_btnModificar = new GridBagConstraints();
+		gbc_btnModificar.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnModificar.insets = new Insets(0, 0, 5, 5);
+		gbc_btnModificar.gridx = 5;
+		gbc_btnModificar.gridy = 12;
+		btnModificar.setIcon(new ImageIcon(ModClienteUI.class.getResource("/iconos/pencil.png")));
+		add(btnModificar, gbc_btnModificar);
 
 	}
 
